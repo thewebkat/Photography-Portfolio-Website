@@ -1,4 +1,61 @@
+:root {
+    --primary-color: #1B1B1B;
+    --secondary-color: #FFFFFF;
+    --accent-color: #F65282;
+    --default-font-family: 'Roboto', sans-serif;
+    --button-font-family: 'Montserrat', sans-serif;
+}
+
 body {
-    font-family: 'Montserrat', sans-serif;
-    font-family: 'Roboto', sans-serif;
+    align-items: center;
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    display: flex;
+    font-family: var(--default-font-family);
+    justify-content: center;
+    margin: 0;
+    min-height: 100vh;
+}
+
+.hero {
+    margin: auto;
+    max-width: 595px;
+    padding: 160px 20px;
+    text-align: center;
+}
+
+h1,
+h2 {
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 72px;
+    line-height: 84.38px;
+}
+
+h2 {
+    font-size: 24px;
+    line-height: 28.13px;
+}
+
+p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.btn-light {
+    border-radius: 50px;
+    color: #272142;
+    font-family: var(--button-font-family);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    line-height: 17.07px;
+    padding: 18px 30px 18px 30px;
+    text-transform: uppercase;
+    width: 200px;
 }
