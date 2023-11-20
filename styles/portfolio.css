@@ -1,31 +1,60 @@
 :root {
     --primary-color: #1B1B1B;
     --secondary-color: #FFFFFF;
+    --third-color: #202020;
     --accent-color: #F65282;
     --default-font-family: 'Roboto', sans-serif;
     --button-font-family: 'Montserrat', sans-serif;
 }
 
 body {
-    align-items: center;
     background: var(--primary-color);
     color: var(--secondary-color);
-    display: flex;
     font-family: var(--default-font-family);
-    justify-content: center;
-    margin: 0;
+    transition: all 200ms ease-in-out;
+}
+
+.container-fluid {
+    max-width: 1152px;
+    padding: 20px 0;
+}
+
+.custom-bg {
+    background: var(--third-color);
+}
+
+.custom-bg a {
+    color: var(--secondary-color);
+}
+
+.brand {
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+header {
+    background-image: url(../images/hero_bg.JPG);
+    background-position: center;
+    background-size: cover;
+    display: flex;
     min-height: 100vh;
 }
 
 .hero {
     margin: auto;
-    max-width: 595px;
-    padding: 160px 20px;
+    max-width: 600px;
     text-align: center;
 }
 
+.hero p {
+    margin: auto;
+    max-width: 460px;
+}
+
 h1,
-h2 {
+h2,
+h3 {
     font-weight: 700;
     letter-spacing: 0.05em;
     text-transform: uppercase;
@@ -33,18 +62,20 @@ h2 {
 
 h1 {
     font-size: 72px;
-    line-height: 84.38px;
 }
 
 h2 {
     font-size: 24px;
-    line-height: 28.13px;
+}
+
+h3 {
+    color: var(--accent-color);
+    font-size: 20px;
 }
 
 p {
     font-size: 18px;
     font-weight: 400;
-    line-height: 30px;
 }
 
 .btn-light {
@@ -58,4 +89,96 @@ p {
     padding: 18px 30px 18px 30px;
     text-transform: uppercase;
     width: 200px;
+}
+
+#gallery,
+#contact {
+    margin: 100px 0;
+    text-align: center;
+}
+
+.row {
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.rectangle img {
+    width: 386px;
+    height: 280px;
+    object-fit: cover;
+}
+
+.square img {
+    width: 308px;
+    height: 280px;
+    object-fit: cover;
+}
+
+.fill img {
+    width: 456px;
+    height: 280px;
+    object-fit: cover;
+}
+
+.equal img {
+    width: 360px;
+    height: 280px;
+    object-fit: cover;
+}
+
+#about {
+    margin: 100px auto;
+}
+
+.about-photo img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.cameras {
+    background: var(--third-color);
+    margin: left;
+    max-width: 375px;
+}
+
+.cameras img {
+    width: 100px;
+}
+
+.copyright {
+    text-align: end;
+}
+
+@media only screen and (max-width: 600px) {
+    header {
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .custom-bg {
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    .col img {
+        height: 100%;
+        width: 80vw;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+
+    .cameras img {
+        width: 100px;
+    }
+
+    .copyright {
+        text-align: center;
+    }
+
 }
