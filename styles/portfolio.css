@@ -144,7 +144,6 @@ p {
 .cameras {
     background: var(--third-color);
     margin: left;
-    max-width: 450px;
 }
 
 .cameras img {
