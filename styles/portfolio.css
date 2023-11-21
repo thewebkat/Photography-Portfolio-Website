@@ -147,14 +147,9 @@ p {
     width: 100px;
 }
 
-.footer-brand {
-    padding: 0;
-    text-align: start;
-}
-
-.footer-copyright {
-    padding: 0;
-    text-align: end;
+.copyright {
+    font-size: 12px;
+    text-align: center;
 }
 
 @media only screen and (max-width: 600px) {
@@ -182,10 +177,5 @@ p {
 
     .cameras img {
         width: 100px;
-    }
-
-    .footer-brand,
-    .footer-copyright {
-        text-align: center;
     }
 }
