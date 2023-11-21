@@ -144,7 +144,7 @@ p {
 }
 
 .cameras img {
-    width: 100px;
+    width: 10vw;
 }
 
 .copyright {
@@ -152,30 +152,39 @@ p {
     text-align: center;
 }
 
-@media only screen and (max-width: 600px) {
-    header {
-        justify-content: center;
-        overflow: hidden;
-    }
+@media only screen and (max-width: 1152px) {
 
     .custom-bg {
         padding: 25px;
+    }
+
+    .col img {
+        height: 100%;
+        width: 90vw;
+    }
+
+    #about {
+        width: 90vw;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    header {
+        justify-content: center;
+        overflow: hidden;
     }
 
     h1 {
         font-size: 36px;
     }
 
-    .col img {
-        height: 100%;
-        width: 80vw;
-    }
-
     .about-text {
         text-align: center;
+        width: 100%;
     }
 
-    .cameras img {
-        width: 100px;
+    .cameras {
+        margin: auto;
     }
+
 }
