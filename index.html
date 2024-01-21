@@ -5,155 +5,271 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Travel & Concert Photographer in Malaysia">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="styles/portfolio.css" />
-    <script src="https://kit.fontawesome.com/db8b0908eb.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="src/portfolio.css" />
     <title>Kat Photography | Travel & Concert Photographer</title>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg custom-bg fixed-top">
-        <div class="container-fluid">
-            <a class="brand" href="index.html" alt="Website Title">Kat Photography</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon navbar-dark"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="index.html#top" alt="Home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html#gallery" alt="Gallery">Gallery</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html#about" alt="About">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html#contact" alt="Contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
     <header id="top">
+        <nav>
+            <li style="float:left" id="navHome"><a href="index.html#top">KAT PHOTOGRAPHY</a></li>
+            <ul id="navLinks">
+                <li><a href="index.html#gallery">Gallery</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#testimonial">Testimonial</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <a href="javascript:void(0);" id="hamburgerIcon" onclick="myFunction()">☰</a>
+        </nav>
         <div class="hero">
-            <h2 class="mb-4">Kat</h2>
-            <h1 class="mb-4">Photography</h1>
-            <p class="mb-5">Travel & Concert Photographer based in Malaysia</p>
+            <h1>Kat Photography</h1>
+            <p>Photographer based in Malaysia</p>
             <div>
-                <a href="index.html#contact" class="btn btn-light" alt="Contact Me">Contact Me</a>
+                <a href="index.html#gallery" alt="Show Me More"><button type="button" class="btn">Show Me
+                        More Pics</button></a>
             </div>
         </div>
     </header>
-    <main class="container-fluid">
-        <div id="gallery">
-            <h1 class="gallery-heading">Gallery</h1>
-            <div class="row">
-                <div class="col mb-3 rectangle">
-                    <img src="images/landscape_tanzania.webp" alt="Tanzania-Kenya border" />
+    <main>
+        <div id="gallery" class="gallery-container container-fluid">
+            <h1>Gallery</h1>
+            <div class="gallery-images">
+                <div class="gallery_img one">
+                    <img src="images/landscape_tanzania.webp" alt="Tanzania-Kenya border" width="100%" height="100%"
+                        onclick="openModal();currentSlide(1)" class="hover-shadow" />
                 </div>
-                <div class="col mb-3 rectangle">
-                    <img src="images/concert_bjork.webp" alt="bjork live in Cornwall 2018" />
+                <div class="gallery_img two">
+                    <img src="images/bridal_shower.webp" alt="Surprise bridal shower" width="100%" height="100%"
+                        onclick="openModal();currentSlide(2)" class="hover-shadow" />
                 </div>
-                <div class="col mb-3 square">
-                    <img src="images/safari_lion.webp" alt="Cheetah in Maasai Mara, Kenya" />
+                <div class="gallery_img three">
+                    <img src="images/safari_giraffe.webp" alt="Maasai giraffe in Maasai Mara, Kenya" width="100%"
+                        height="100%" onclick="openModal();currentSlide(3)" class="hover-shadow" />
                 </div>
-            </div>
-            <div class="row">
-                <div class="col mb-3 square">
-                    <img src="images/concert_nin.webp"
-                        alt="Dave Navarro performing with Jane's Addiction in London, 2009" />
+                <div class="gallery_img four">
+                    <img src="images/concert_inoran.webp" alt="Inoran at the Best Bout 2017 concert in Singapore"
+                        width="100%" height="100%" onclick="openModal();currentSlide(4)" class="hover-shadow" />
                 </div>
-                <div class="col mb-3 square">
-                    <img src="images/safari_cranes.webp" alt="Grey crowned crane family in Maasai Mara, Kenya" />
+                <div class="gallery_img five">
+                    <img src="images/safari_elephant.webp" alt="The loneliest elephant in Maasai Mara, Kenya"
+                        width="100%" height="100%" onclick="openModal();currentSlide(5)" class="hover-shadow" />
                 </div>
-                <div class="col mb-3 fill">
-                    <img src="images/landscape_singapore.webp" alt="Marina Bay Sands Hotel, Singapore" />
+                <div class="gallery_img six">
+                    <img src="images/landscape_shinjuku.webp" alt="Nightscape in Shinjuku, Japan" width="100%"
+                        height="100%" onclick="openModal();currentSlide(6)" class="hover-shadow" />
                 </div>
-            </div>
-            <div class="row">
-                <div class="col mb-3 equal">
-                    <img src="images/safari_elephant.webp" alt="The loneliest elephant in Maasai Mara, Kenya" />
+                <div class="gallery_img seven">
+                    <img src="images/safari_cranes.webp" alt="Grey crowned crane family in Maasai Mara, Kenya"
+                        width="100%" height="100%" onclick="openModal();currentSlide(7)" class="hover-shadow" />
                 </div>
-                <div class="col mb-3 equal">
-                    <img src="images/landscape_shinjuku.webp" alt="Nightscape in Shinjuku, Japan" />
+                <div class="gallery_img eight">
+                    <img src="images/statue_recoleta.webp" alt="Statue in La Recoleta Cemetery, Buenos Aires"
+                        width="100%" height="100%" onclick="openModal();currentSlide(8)" class="hover-shadow" />
                 </div>
-                <div class="col mb-3 equal">
-                    <img src="images/concert_grace_jones.webp" alt="Grace Jones live in Sydney, 2018" />
+                <div class="gallery_img nine">
+                    <img src="images/portrait_maasai_man.webp" alt="A Maasai man in Maasai Mara, Kenya" width="100%"
+                        height="100%" onclick="openModal();currentSlide(9)" class="hover-shadow" />
                 </div>
-            </div>
-            <div class="row">
-                <div class="col mb-3 rectangle">
-                    <img src="images/landscape_rio.webp" alt="Christ the Redeemer as seen from Pao de Acucar, Brazil" />
+                <div class="gallery_img ten">
+                    <img src="images/landscape_singapore.webp" alt="Marina Bay Sands Hotel, Singapore" width="100%"
+                        height="100%" onclick="openModal();currentSlide(10)" class="hover-shadow" />
                 </div>
-                <div class="col mb-3 rectangle">
-                    <img src="images/concert_low.webp" alt="Low live in Poland, 2018" />
-                </div>
-                <div class="col mb-3 square">
-                    <img src="images/safari_giraffe.webp" alt="Masai giraffe in Maasai Mara, Kenya" />
-                </div>
-            </div>
-        </div>
+                <div class="gallery_img eleven">
+                    <img src="images/concert_grace_jones.webp" alt="Grace Jones live in Sydney, 2018" width="100%"
+                        height="100%" onclick="openModal();currentSlide(11)" class="hover-shadow" />
 
-        <div id="about">
-            <div class="row">
-                <div class="col-6 about-photo d-none d-sm-block">
-                    <img src="images/profile.webp" class="img-fluid" alt="Profile Photo" />
                 </div>
-                <div class="col-6 about-text">
-                    <h3 class="mt-4">About Me</h3>
-                    <h1 class="mt-4">Kat</h1>
-                    <p class="mt-4">For the past 15 years I have been documenting landscapes all around
-                        the world. I also combine my passion for both photography and music by shooting concerts.
-                    </p>
-                    <h3 class="mt-5">My Cameras</h3>
-                    <div class="cameras mt-4 pb-2">
-                        <div>
-                            <img src="icons/canon100d.png" class="ms-2 me-4" alt="Canon EOS 100D" />
-                            <span>Canon EOS 100D</span>
+                <div class="gallery_img twelve">
+                    <img src="images/safari_lion.webp" alt="Cheetah in Maasai Mara, Kenya" width="100%" height="100%"
+                        onclick="openModal();currentSlide(12)" class="hover-shadow" />
+                </div>
+            </div>
+
+            <div id="myModal" class="modal">
+                <span class="close cursor" onclick="closeModal()">&times;</span>
+                <div class="modal-content">
+
+                    <div class="mySlides">
+                        <div class="numbertext">1 / 12</div>
+                        <img src="images/landscape_tanzania.webp" width="100%" height="100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">2 / 12</div>
+                        <img src="images/bridal_shower.webp" width="100%" height="100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">3 / 12</div>
+                        <img src="images/safari_giraffe.webp" width="100%" height="100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">4 / 12</div>
+                        <img src="images/concert_inoran.webp" width="100%" height="100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">5 / 12</div>
+                        <img src="images/safari_elephant.webp" width="100%" height="100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">6 / 12</div>
+                        <img src="images/landscape_shinjuku.webp" width="100%" height="100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">7 / 12</div>
+                        <img src="images/safari_cranes.webp" width="100%" height="100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">8 / 12</div>
+                        <img src="images/statue_recoleta.webp" width="100%" height="100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">9 / 12</div>
+                        <img src="images/portrait_maasai_man.webp" width="100%" height="100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">10 / 12</div>
+                        <img src="images/landscape_singapore.webp" width="100%" height="100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">11 / 12</div>
+                        <img src="images/concert_grace_jones.webp" width="100%" height="100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">12 / 12</div>
+                        <img src="images/safari_lion.webp" width="100%" height="100%">
+                    </div>
+
+                    <!-- Next/previous controls -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                    <!-- Caption text -->
+                    <div class="caption-container">
+                        <p id="caption"></p>
+                    </div>
+
+                    <!-- Thumbnail image controls -->
+                    <div id="thumbnails">
+                        <div class="column">
+                            <img class="demo" src="images/landscape_tanzania.webp" onclick="currentSlide(1)"
+                                alt="Tanzania-Kenya border" width="100%" height="100%">
                         </div>
-                        <div>
-                            <img src="icons/canonm6.png" class="ms-2 me-4" alt="Canon EOS M6" />
-                            <span>Canon EOS M6</span>
+
+                        <div class="column">
+                            <img class="demo" src="images/bridal_shower.webp" onclick="currentSlide(2)"
+                                alt="Surprise bridal shower" width="100%" height="100%">
+                        </div>
+
+                        <div class="column">
+                            <img class="demo" src="images/safari_giraffe.webp" onclick="currentSlide(3)"
+                                alt="Maasai giraffe in Maasai Mara, Kenya" width="100%" height="100%">
+                        </div>
+
+                        <div class="column">
+                            <img class="demo" src="images/concert_inoran.webp" onclick="currentSlide(4)"
+                                alt="Inoran at the Best Bout 2017 concert in Singapore" width="100%" height="100%">
+                        </div>
+
+                        <div class="column">
+                            <img class="demo" src="images/safari_elephant.webp" onclick="currentSlide(5)"
+                                alt="The loneliest elephant in Maasai Mara, Kenya" width="100%" height="100%">
+                        </div>
+
+                        <div class="column">
+                            <img class="demo" src="images/landscape_shinjuku.webp" onclick="currentSlide(6)"
+                                alt="Nightscape in Shinjuku, Japan" width="100%" height="100%">
+                        </div>
+
+                        <div class="column">
+                            <img class="demo" src="images/safari_cranes.webp" onclick="currentSlide(7)"
+                                alt="Grey crowned crane family in Maasai Mara, Kenya" width="100%" height="100%">
+                        </div>
+
+                        <div class="column">
+                            <img class="demo" src="images/statue_recoleta.webp" onclick="currentSlide(8)"
+                                alt="Statue in La Recoleta Cemetery, Buenos Aires" width="100%" height="100%">
+                        </div>
+
+                        <div class="column">
+                            <img class="demo" src="images/portrait_maasai_man.webp" onclick="currentSlide(9)"
+                                alt="A Maasai man in Maasai Mara, Kenya" width="100%" height="100%">
+                        </div>
+
+                        <div class="column">
+                            <img class="demo" src="images/landscape_singapore.webp" onclick="currentSlide(10)"
+                                alt="Marina Bay Sands Hotel, Singapore" width="100%" height="100%">
+                        </div>
+
+                        <div class="column">
+                            <img class="demo" src="images/concert_grace_jones.webp" onclick="currentSlide(11)"
+                                alt="Grace Jones live in Sydney, 2018" width="100%" height="100%">
+                        </div>
+
+                        <div class="column">
+                            <img class="demo" src="images/safari_lion.webp" onclick="currentSlide(12)"
+                                alt="Cheetah in Maasai Mara, Kenya" width="100%" height="100%">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div id="contact">
-            <h1 class="contact-heading">Get in touch!</h1>
-            <div class="row">
-                <i class="fa-solid fa-envelope mt-5 mb-3" style="color: #ffffff;"></i>
-                <div>
-                    <a href="mailto:kartmohd@gmail.com" class="btn btn-light" target="_blank" alt="Contact Me">Email</a>
-                </div>
-                <i class="fa-brands fa-linkedin mt-5 mb-3" style="color: #ffffff;"></i>
-                <div>
-                    <a href="https://www.linkedin.com/in/katmohd/" class="btn btn-light" target="_blank"
-                        alt="LinkedIn">LinkedIn</a>
+        <div id="about" class="container-fluid">
+            <div class="about-photo">
+                <img src="images/profile.webp" class="img-fluid" alt="Profile Photo" width="50%" height="50%" />
+            </div>
+            <div class="about-text">
+                <h1>About</h1>
+                <h2>Kat</h2>
+                <p>For the past 15 years, I have been documenting landscapes all around
+                    the world. I also combine my passion for both photography and music by shooting concerts.
+                </p>
+                <h2>Cameras</h2>
+                <div class="cameras">
+                    <div class="camera">
+                        <img src="icons/canon100d.png" alt="Canon 100D" width="100%" height="100%" />
+                        <span>Canon 100D</span>
+                    </div>
+                    <div class="camera">
+                        <img src="icons/canonm6.png" alt="Canon M6" width="100%" height="100%" />
+                        <span>Canon M6</span>
+                    </div>
                 </div>
             </div>
         </div>
-    </main>
-    <footer class="custom-bg">
-        <div class="row container-fluid">
-            <span class="copyright">© 2023 | Kat | <a href="https://github.com/katmohd/Photography-Portfolio-Website"
-                    target="_blank" alt="GitHub">Open-sourced on GitHub</a>
-                | All rights reserved</span>
+
+        <div id="testimonial">
+            <h1>Testimonial</h1>
+            <h2>"Kat makes everything look dreamy."</h2>
+            <h3>- previous client -</h3>
         </div>
+
+        <div id="contact">
+            <h1 class="contact-heading">Need a photographer?</h1>
+            <div>
+                <a href="mailto:kartmohd@gmail.com" target="_blank" alt="Contact Me"><button type="button"
+                        class="btn">Kat, please shoot
+                        me</button></a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <span class="copyright">© 2023-2024 | Kat | <a href="https://github.com/katmohd/Photography-Portfolio-Website"
+                target="_blank" alt="GitHub">Open-sourced on GitHub</a>
+            | All rights reserved</span>
     </footer>
+
+    <script src="src/scripts.js"></script>
 </body>
 
 </html>
