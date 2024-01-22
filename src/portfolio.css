@@ -456,8 +456,8 @@ footer {
     }
 
     .gallery-images {
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(12, auto);
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(6, auto);
     }
 
     .gallery_img img {
@@ -487,5 +487,10 @@ footer {
 @media only screen and (max-width: 576px) {
     h1 {
         font-size: 36px;
+    }
+
+    .gallery-images {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(12, auto);
     }
 }
