@@ -493,6 +493,10 @@ footer {
 }
 
 @media only screen and (max-width: 576px) {
+    h1 {
+        font-size: 36px;
+    }
+
     .gallery-images {
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(12, auto);
